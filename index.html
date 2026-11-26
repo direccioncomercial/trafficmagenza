@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Propuesta Comercial | MAGENZA HEALTH BROKER — Evolusercom</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tipografía Corporativa Moderna: Manrope, Source Sans 3 & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Iconografía Sobria -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Manrope"', 'system-ui', 'sans-serif'],
+            sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            pearl: '#F5F6F4',
+            forest: '#1D4D42',
+            forestDark: '#143830',
+            sage: '#E6EFEA',
+            graphite: '#1C1F1E',
+            slateText: '#4A524F',
+            terracotta: '#8C3B3B',
+            terracottaSoft: '#F6ECEC',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --bg-white: #FFFFFF;
+      --bg-pearl: #F5F6F4;
+      --forest: #1D4D42;
+      --sage: #E6EFEA;
+      --graphite: #1C1F1E;
+      --slate-text: #4A524F;
+      --terracotta: #8C3B3B;
+    }
+
+    body {
+      background-color: var(--bg-pearl);
+      background-image:
+        radial-gradient(circle at 8% 6%, rgba(29, 77, 66, 0.055), transparent 36%),
+        radial-gradient(circle at 92% 14%, rgba(230, 239, 234, 0.7), transparent 42%),
+        radial-gradient(circle at 50% 88%, rgba(140, 59, 59, 0.03), transparent 45%);
+      color: var(--graphite);
+      font-family: 'Source Sans 3', sans-serif;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .font-ui {
+      font-family: 'Manrope', sans-serif;
+      color: var(--graphite);
+    }
+
+    .font-financial {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Efectos Glass en Versión Clara */
+    .glass-header {
+      background: rgba(255, 255, 255, 0.84);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(29, 77, 66, 0.12);
+    }
+
+    .glass-surface {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(29, 77, 66, 0.12);
+      box-shadow: 0 10px 30px -14px rgba(28, 31, 30, 0.07);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(29, 77, 66, 0.12);
+      box-shadow: 0 8px 24px -12px rgba(28, 31, 30, 0.06);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(29, 77, 66, 0.3);
+      box-shadow: 0 16px 34px -14px rgba(29, 77, 66, 0.12);
+    }
+
+    .glass-submenu {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(29, 77, 66, 0.14);
+      box-shadow: 0 22px 46px -14px rgba(28, 31, 30, 0.14);
+      transform-origin: top center;
+      animation: submenuDrop 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes submenuDrop {
+      from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes fadeSlide {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade {
+      animation: fadeSlide 0.28s ease forwards;
+    }
+
+    /* Máscaras CSS para Desvanecimiento Orgánico hacia Blanco / Gris Perla */
+    .mask-hero-latino {
+      -webkit-mask-image:
+        linear-gradient(to left, rgba(0, 0, 0, 0.92) 32%, rgba(0, 0, 0, 0.38) 72%, transparent 100%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.98) 70%, transparent 100%);
+    /* Máscaras CSS para Desvanecimiento Orgánico Sutil (Solo Borde Inferior / Lateral) */
+    .mask-hero-latino {
+      -webkit-mask-image:
+        linear-gradient(to left, rgba(0, 0, 0, 0.95) 55%, rgba(0, 0, 0, 0.4) 82%, transparent 100%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 1) 84%, transparent 100%);
+      -webkit-mask-composite: source-in;
+      mask-image:
+        linear-gradient(to left, rgba(0, 0, 0, 0.95) 55%, rgba(0, 0, 0, 0.4) 82%, transparent 100%),
+        linear-gradient(to bottom, rgba(0, 0, 0, 1) 84%, transparent 100%);
+      mask-composite: intersect;
+    }
+
+    .mask-soft-bottom {
+      -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 84%, rgba(0, 0, 0, 0) 100%);
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 84%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    /* Sliders en Verde Bosque Mineral */
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      background: #DCE5E0;
+      height: 6px;
+      border-radius: 999px;
+      outline: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #1D4D42;
+      border: 3px solid #FFFFFF;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(29, 77, 66, 0.3);
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover {
+      transform: scale(1.1);
+      background: #143830;
+    }
+
+    input[type="range"]:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .chevron-icon {
+      transition: transform 0.2s ease;
+    }
+    .menu-open .chevron-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Impresión / PDF */
+    @media print {
+      body { background: #FFFFFF !important; color: #1C1F1E !important; }
+      header, .no-print, #approvalModal, #toastBox { display: none !important; }
+      .glass-surface, .glass-card {
+        background: #FFFFFF !important;
+        border: 1px solid #D4DDD8 !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        break-inside: avoid;
+      }
+      section { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+      img { -webkit-mask-image: none !important; mask-image: none !important; }
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-sage selection:text-forest">
+
+  <!-- BARRA DE NAVEGACIÓN SUPERIOR FIJA CON SUBMENÚS AL CLIC -->
+  <header class="glass-header fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo Oficial Evolusercom -->
+        <a href="#resumen-ejecutivo" class="flex items-center shrink-0 focus:outline-none" aria-label="Evolusercom">
+          <img
+            src="https://raw.githubusercontent.com/direccioncomercial/evoluser-web/main/logo.png"
+            alt="Evolusercom"
+            class="h-10 sm:h-11 w-auto object-contain"
+            onerror="this.onerror=null; this.outerHTML='<span class=\'font-display font-extrabold text-xl tracking-tight text-forest\'>EVOLUSER<span class=\'text-graphite\'>COM</span></span>';"
+          />
+        </a>
+
+        <!-- 4 Menús Principales con Submenús Desplegables al Clic -->
+        <nav class="hidden lg:flex items-center space-x-1.5" aria-label="Menú principal">
+          
+          <!-- 1. Propuesta -->
+          <div class="relative nav-item-container">
+            <button
+              type="button"
+              onclick="toggleClickSubmenu('menu-propuesta', this)"
+              aria-expanded="false"
+              class="nav-trigger font-ui px-4 py-2.5 rounded-lg text-sm font-semibold text-graphite hover:bg-sage/70 hover:text-forest flex items-center gap-2 transition"
+            >
+              <span>Propuesta</span>
+              <i class="fa-solid fa-chevron-down text-[10px] text-forest chevron-icon"></i>
+            </button>
+            <div id="menu-propuesta" class="nav-submenu hidden absolute left-0 mt-2.5 w-72 rounded-xl glass-submenu p-2 z-50">
+              <a href="#resumen-ejecutivo" onclick="closeAllSubmenus()" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <i class="fa-solid fa-file-lines text-forest text-xs mt-1"></i>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Resumen Ejecutivo</p>
+                  <p class="text-xs text-slateText">Presentación para MAGENZA HEALTH BROKER</p>
+                </div>
+              </a>
+              <a href="#objetivo-estrategico" onclick="closeAllSubmenus()" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <i class="fa-solid fa-bullseye text-forest text-xs mt-1"></i>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Objetivo Estratégico</p>
+                  <p class="text-xs text-slateText">Captación nativa y asesoría en salud</p>
+                </div>
+              </a>
+              <a href="#ecosistema-dual" onclick="closeAllSubmenus()" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <i class="fa-solid fa-diagram-project text-forest text-xs mt-1"></i>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Ecosistema Meta + TikTok</p>
+                  <p class="text-xs text-slateText">Rol comercial de cada plataforma</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Alcance Técnico -->
+          <div class="relative nav-item-container">
+            <button
+              type="button"
+              onclick="toggleClickSubmenu('menu-alcance', this)"
+              aria-expanded="false"
+              class="nav-trigger font-ui px-4 py-2.5 rounded-lg text-sm font-semibold text-graphite hover:bg-sage/70 hover:text-forest flex items-center gap-2 transition"
+            >
+              <span>Alcance Técnico</span>
+              <i class="fa-solid fa-chevron-down text-[10px] text-forest chevron-icon"></i>
+            </button>
+            <div id="menu-alcance" class="nav-submenu hidden absolute left-0 mt-2.5 w-80 rounded-xl glass-submenu p-2 z-50">
+              <a href="#alcance-tecnico" onclick="navigateToPhase(0)" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <span class="font-financial text-xs font-semibold text-forest bg-sage px-2 py-0.5 rounded mt-0.5">01</span>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Configuración Business (Meta & TikTok)</p>
+                  <p class="text-xs text-slateText">Business Suite, TikTok Business Center y WhatsApp</p>
+                </div>
+              </a>
+              <a href="#alcance-tecnico" onclick="navigateToPhase(1)" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <span class="font-financial text-xs font-semibold text-forest bg-sage px-2 py-0.5 rounded mt-0.5">02</span>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Estrategia y Segmentación</p>
+                  <p class="text-xs text-slateText">Audiencias de familias, ejecutivos y jóvenes</p>
+                </div>
+              </a>
+              <a href="#alcance-tecnico" onclick="navigateToPhase(2)" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <span class="font-financial text-xs font-semibold text-forest bg-sage px-2 py-0.5 rounded mt-0.5">03</span>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Campañas Nativas (WhatsApp y Formularios)</p>
+                  <p class="text-xs text-slateText">Lead Ads, TikTok Instant Forms y mensajes</p>
+                </div>
+              </a>
+              <a href="#alcance-tecnico" onclick="navigateToPhase(3)" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <span class="font-financial text-xs font-semibold text-forest bg-sage px-2 py-0.5 rounded mt-0.5">04</span>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Optimización y Reportes</p>
+                  <p class="text-xs text-slateText">Etiquetado WhatsApp y reportes nativos</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Inversión -->
+          <div class="relative nav-item-container">
+            <button
+              type="button"
+              onclick="toggleClickSubmenu('menu-inversion', this)"
+              aria-expanded="false"
+              class="nav-trigger font-ui px-4 py-2.5 rounded-lg text-sm font-semibold text-graphite hover:bg-sage/70 hover:text-forest flex items-center gap-2 transition"
+            >
+              <span>Inversión</span>
+              <i class="fa-solid fa-chevron-down text-[10px] text-forest chevron-icon"></i>
+            </button>
+            <div id="menu-inversion" class="nav-submenu hidden absolute left-0 mt-2.5 w-72 rounded-xl glass-submenu p-2 z-50">
+              <a href="#planes-gestion" onclick="closeAllSubmenus()" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <i class="fa-solid fa-layer-group text-forest text-xs mt-1"></i>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Planes de Gestión</p>
+                  <p class="text-xs text-slateText">Lanzamiento, Crecimiento Dual y Creativos</p>
+                </div>
+              </a>
+              <a href="#simulador-presupuesto" onclick="closeAllSubmenus()" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <i class="fa-solid fa-sliders text-forest text-xs mt-1"></i>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Simulador de Presupuesto</p>
+                  <p class="text-xs text-slateText">Cálculo en vivo de Meta Ads y TikTok Ads</p>
+                </div>
+              </a>
+              <a href="#regla-escalamiento" onclick="closeAllSubmenus()" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <i class="fa-solid fa-arrow-trend-up text-forest text-xs mt-1"></i>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Regla de Escalamiento</p>
+                  <p class="text-xs text-slateText">Crecimiento comercial sobre $1,500 USD</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Condiciones -->
+          <div class="relative nav-item-container">
+            <button
+              type="button"
+              onclick="toggleClickSubmenu('menu-condiciones', this)"
+              aria-expanded="false"
+              class="nav-trigger font-ui px-4 py-2.5 rounded-lg text-sm font-semibold text-graphite hover:bg-sage/70 hover:text-forest flex items-center gap-2 transition"
+            >
+              <span>Condiciones</span>
+              <i class="fa-solid fa-chevron-down text-[10px] text-forest chevron-icon"></i>
+            </button>
+            <div id="menu-condiciones" class="nav-submenu hidden absolute right-0 mt-2.5 w-72 rounded-xl glass-submenu p-2 z-50">
+              <a href="#requerimientos-entregables" onclick="closeAllSubmenus()" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <i class="fa-solid fa-clipboard-check text-forest text-xs mt-1"></i>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Requerimientos y Entregables</p>
+                  <p class="text-xs text-slateText">Forma de pago y responsabilidades</p>
+                </div>
+              </a>
+              <a href="#propiedad-activos" onclick="closeAllSubmenus()" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <i class="fa-solid fa-shield-halved text-forest text-xs mt-1"></i>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Propiedad de Activos</p>
+                  <p class="text-xs text-slateText">Cuentas 100% a nombre de MAGENZA</p>
+                </div>
+              </a>
+              <a href="#aprobacion-propuesta" onclick="closeAllSubmenus()" class="flex items-start gap-3 p-3 rounded-lg hover:bg-sage/60 transition">
+                <i class="fa-solid fa-signature text-forest text-xs mt-1"></i>
+                <div>
+                  <p class="font-ui text-sm font-semibold text-graphite">Aprobación</p>
+                  <p class="text-xs text-slateText">Confirmación y arranque de onboarding</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Botón Discreto Imprimir / PDF + Menú Móvil -->
+        <div class="flex items-center gap-2.5">
+          <button
+            type="button"
+            onclick="window.print()"
+            class="font-ui inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold text-forest bg-sage/80 hover:bg-forest hover:text-white border border-forest/15 transition"
+          >
+            <i class="fa-solid fa-print"></i>
+            <span>Imprimir / PDF</span>
+          </button>
+
+          <button
+            type="button"
+            onclick="toggleMobileDrawer()"
+            class="lg:hidden p-2.5 rounded-lg bg-white border border-forest/15 text-graphite hover:bg-sage transition"
+            aria-label="Abrir menú móvil"
+          >
+            <i id="mobileDrawerIcon" class="fa-solid fa-bars text-base"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú Móvil Tipo Acordeón -->
+    <div id="mobileDrawer" class="hidden lg:hidden glass-submenu border-t border-forest/10 max-h-[82vh] overflow-y-auto">
+      <div class="px-4 py-4 space-y-2">
+        <div class="rounded-xl bg-pearl border border-forest/10 overflow-hidden">
+          <button type="button" onclick="toggleMobAccordion('mob-propuesta', this)" class="font-ui w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-graphite">
+            <span>Propuesta</span>
+            <i class="fa-solid fa-chevron-down text-xs text-forest chevron-icon"></i>
+          </button>
+          <div id="mob-propuesta" class="hidden px-4 pb-3 space-y-2 border-t border-forest/10 pt-2.5">
+            <a href="#resumen-ejecutivo" onclick="toggleMobileDrawer()" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• Resumen Ejecutivo</a>
+            <a href="#objetivo-estrategico" onclick="toggleMobileDrawer()" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• Objetivo Estratégico</a>
+            <a href="#ecosistema-dual" onclick="toggleMobileDrawer()" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• Ecosistema Meta + TikTok</a>
+          </div>
+        </div>
+
+        <div class="rounded-xl bg-pearl border border-forest/10 overflow-hidden">
+          <button type="button" onclick="toggleMobAccordion('mob-alcance', this)" class="font-ui w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-graphite">
+            <span>Alcance Técnico</span>
+            <i class="fa-solid fa-chevron-down text-xs text-forest chevron-icon"></i>
+          </button>
+          <div id="mob-alcance" class="hidden px-4 pb-3 space-y-2 border-t border-forest/10 pt-2.5">
+            <a href="#alcance-tecnico" onclick="navigateToPhase(0); toggleMobileDrawer();" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• 01. Configuración Business (Meta & TikTok)</a>
+            <a href="#alcance-tecnico" onclick="navigateToPhase(1); toggleMobileDrawer();" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• 02. Estrategia y Segmentación</a>
+            <a href="#alcance-tecnico" onclick="navigateToPhase(2); toggleMobileDrawer();" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• 03. Campañas Nativas (WhatsApp y Formularios)</a>
+            <a href="#alcance-tecnico" onclick="navigateToPhase(3); toggleMobileDrawer();" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• 04. Optimización y Reportes</a>
+          </div>
+        </div>
+
+        <div class="rounded-xl bg-pearl border border-forest/10 overflow-hidden">
+          <button type="button" onclick="toggleMobAccordion('mob-inversion', this)" class="font-ui w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-graphite">
+            <span>Inversión</span>
+            <i class="fa-solid fa-chevron-down text-xs text-forest chevron-icon"></i>
+          </button>
+          <div id="mob-inversion" class="hidden px-4 pb-3 space-y-2 border-t border-forest/10 pt-2.5">
+            <a href="#planes-gestion" onclick="toggleMobileDrawer()" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• Planes de Gestión</a>
+            <a href="#simulador-presupuesto" onclick="toggleMobileDrawer()" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• Simulador de Presupuesto</a>
+            <a href="#regla-escalamiento" onclick="toggleMobileDrawer()" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• Regla de Escalamiento</a>
+          </div>
+        </div>
+
+        <div class="rounded-xl bg-pearl border border-forest/10 overflow-hidden">
+          <button type="button" onclick="toggleMobAccordion('mob-condiciones', this)" class="font-ui w-full flex items-center justify-between px-4 py-3 text-sm font-semibold text-graphite">
+            <span>Condiciones</span>
+            <i class="fa-solid fa-chevron-down text-xs text-forest chevron-icon"></i>
+          </button>
+          <div id="mob-condiciones" class="hidden px-4 pb-3 space-y-2 border-t border-forest/10 pt-2.5">
+            <a href="#requerimientos-entregables" onclick="toggleMobileDrawer()" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• Requerimientos y Entregables</a>
+            <a href="#propiedad-activos" onclick="toggleMobileDrawer()" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• Propiedad de Activos</a>
+            <a href="#aprobacion-propuesta" onclick="toggleMobileDrawer()" class="block py-1 text-xs font-medium text-slateText hover:text-forest">• Aprobación</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PORTADA / RESUMEN EJECUTIVO -->
+  <section id="resumen-ejecutivo" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 bg-white overflow-hidden">
+    <!-- Fotografía Horizontal Segmento Latino Profesional con Encuadre Seguro -->
+    <div class="absolute inset-0 pointer-events-none select-none overflow-hidden">
+      <div class="hidden lg:block absolute right-0 top-0 w-[52%] h-full opacity-55">
+        <img
+          src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&h=750&crop=faces,top&q=85"
+          alt="Asesores ejecutivos latinoamericanos en reunión corporativa"
+          class="w-full h-full object-cover object-[50%_22%] mask-hero-latino"
+          onerror="this.style.display='none'"
+        />
+      </div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl space-y-6">
+        
+        <div class="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-sage border border-forest/15 text-[11px] font-ui font-semibold tracking-[0.12em] text-forest uppercase">
+          <span>Propuesta Comercial Ejecutiva</span>
+          <span class="w-1 h-1 rounded-full bg-terracotta"></span>
+          <span>Ecuador & Latinoamérica · Noviembre 2026</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold text-graphite leading-[1.12] tracking-tight">
+          Gestión de Tráfico Digital en <span class="text-forest">Meta Ads y TikTok Ads</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-slateText leading-relaxed max-w-2xl">
+          Estrategia de captación 100% nativa en redes sociales diseñada para <strong class="text-graphite font-semibold">MAGENZA HEALTH BROKER</strong>, enfocada en generar prospectos calificados de seguros de salud mediante WhatsApp Business y Formularios Instantáneos, sin fricción técnica ni dependencias externas.
+        </p>
+
+        <!-- Tarjeta Identificativa del Cliente -->
+        <div class="glass-surface rounded-2xl p-5 sm:p-6 max-w-2xl border-l-4 border-l-forest flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <p class="font-ui text-[11px] font-bold uppercase tracking-[0.14em] text-terracotta">
+              Preparado exclusivamente para
+            </p>
+            <p id="heroClientName" class="font-display text-xl sm:text-2xl font-extrabold text-graphite tracking-tight">
+              MAGENZA HEALTH BROKER
+            </p>
+            <p class="text-xs text-slateText">
+              Presentado por <span class="font-semibold text-forest">Evolusercom</span> · Modalidad Mensual Recurrente
+            </p>
+          </div>
+          <div class="no-print flex flex-wrap gap-2.5 shrink-0">
+            <a
+              href="#simulador-presupuesto"
+              class="font-ui inline-flex items-center gap-2 px-5 py-3 rounded-lg text-xs font-semibold tracking-wide text-white bg-forest hover:bg-forestDark transition shadow-sm"
+            >
+              <i class="fa-solid fa-sliders"></i>
+              <span>Simular Presupuesto</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Pilares del Modelo Nativo -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
+        <div class="glass-card rounded-2xl p-6">
+          <span class="font-financial text-xs font-semibold text-terracotta bg-terracottaSoft px-2.5 py-1 rounded-md">01 · 100% Nativo</span>
+          <h3 class="text-lg font-bold text-graphite mt-3 mb-2">Sin Fricción Técnica</h3>
+          <p class="text-sm text-slateText leading-relaxed">
+            Todo el embudo opera dentro de las propias plataformas: conversaciones directas a WhatsApp Business, Instagram Direct y Formularios Instantáneos Nativos de Meta y TikTok.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <span class="font-financial text-xs font-semibold text-forest bg-sage px-2.5 py-1 rounded-md">02 · Dual Channel</span>
+          <h3 class="text-lg font-bold text-graphite mt-3 mb-2">Sinergia Meta + TikTok</h3>
+          <p class="text-sm text-slateText leading-relaxed">
+            Combinamos la precisión comercial de Facebook e Instagram con el descubrimiento masivo en video vertical de TikTok Ads para captar familias, ejecutivos y profesionales jóvenes.
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <span class="font-financial text-xs font-semibold text-forest bg-sage px-2.5 py-1 rounded-md">03 · Transparencia</span>
+          <h3 class="text-lg font-bold text-graphite mt-3 mb-2">Inversión Separada</h3>
+          <p class="text-sm text-slateText leading-relaxed">
+            Honorarios de Evolusercom facturados de forma independiente a la pauta publicitaria, la cual es debitada directamente por Meta y TikTok desde la tarjeta de MAGENZA HEALTH BROKER.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 1: OBJETIVO ESTRATÉGICO Y ECOSISTEMA META + TIKTOK -->
+  <section id="objetivo-estrategico" class="py-20 lg:py-28 border-t border-forest/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Objetivo Estratégico -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
+        <div class="lg:col-span-6 space-y-5">
+          <span class="font-ui text-xs font-bold uppercase tracking-[0.16em] text-terracotta">01 · Objetivo Estratégico</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-graphite leading-tight">
+            Captación consultiva de prospectos para seguros de salud
+          </h2>
+          <p class="text-base text-slateText leading-relaxed">
+            En el sector de seguros médicos y <em>health brokers</em> en Ecuador y Latinoamérica, el cliente no compra por impulso: busca respaldo, claridad en coberturas y asesoría humana inmediata.
+          </p>
+          <p class="text-base text-slateText leading-relaxed">
+            Nuestro objetivo es estructurar un sistema continuo de adquisición en <strong class="text-graphite font-semibold">Meta Ads y TikTok Ads</strong> que convierta el interés de los usuarios en conversaciones reales dentro del WhatsApp Business de <strong class="text-graphite font-semibold">MAGENZA HEALTH BROKER</strong> y en registros calificados mediante Formularios Instantáneos Nativos.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="glass-surface rounded-xl p-4">
+              <p class="font-ui text-xs font-bold text-forest uppercase tracking-wider mb-1">Conversión Directa</p>
+              <p class="text-sm text-slateText">Anuncios con botón directo a WhatsApp Business e Instagram Direct para cotización ágil.</p>
+            </div>
+            <div class="glass-surface rounded-xl p-4">
+              <p class="font-ui text-xs font-bold text-forest uppercase tracking-wider mb-1">Medición Nativa</p>
+              <p class="text-sm text-slateText">Etiquetado de chats en WhatsApp Business y reportes nativos de Meta Ads Manager y TikTok Ads Manager.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Imagen Equipo Latino en Reunión de Asesoría (Formato Horizontal 16:10) -->
+        <div class="lg:col-span-6">
+          <div class="glass-surface rounded-2xl p-3.5">
+            <div class="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-pearl">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&h=750&crop=faces,top&q=85"
+                alt="Asesoría ejecutiva cercana en el sector salud latinoamericano"
+                class="w-full h-full object-cover object-[50%_22%] mask-soft-bottom"
+                onerror="this.src='https://placehold.co/1200x750/e6efea/1d4d42?text=Asesoria+Ejecutiva'"
+              />
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-white/75 to-transparent"></div>
+            </div>
+            <div class="px-3 pt-3 pb-1 flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <p class="font-ui text-[11px] font-bold uppercase tracking-wider text-forest">Enfoque Consultivo</p>
+                <p class="font-ui text-sm font-semibold text-graphite">Prospectos calificados sin salir de las aplicaciones</p>
+              </div>
+              <span class="font-financial text-xs font-medium px-3 py-1 rounded-full bg-sage text-forest border border-forest/15">
+                Embudo Nativo
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparativa del Ecosistema Meta Ads + TikTok Ads -->
+      <div id="ecosistema-dual" class="pt-4">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <span class="font-ui text-xs font-bold uppercase tracking-[0.16em] text-forest">Ecosistema Dual de Adquisición</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-graphite mt-2">
+            Rol Estratégico de Meta Ads y TikTok Ads para MAGENZA HEALTH BROKER
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          
+          <!-- Meta Ads -->
+          <div class="glass-card rounded-2xl p-7 sm:p-8 border-t-4 border-t-forest">
+            <div class="flex items-center justify-between gap-4 mb-5">
+              <div class="flex items-center gap-3">
+                <span class="w-11 h-11 rounded-xl bg-sage text-forest flex items-center justify-center text-lg">
+                  <i class="fa-brands fa-meta"></i>
+                </span>
+                <div>
+                  <h4 class="text-xl font-bold text-graphite">Meta Ads</h4>
+                  <p class="text-xs text-slateText">Facebook & Instagram</p>
+                </div>
+              </div>
+              <span class="font-ui text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-sage text-forest">
+                Conversión & Respaldo
+              </span>
+            </div>
+
+            <p class="text-sm text-slateText leading-relaxed mb-5">
+              Canal principal para captar a jefes de hogar, familias y ejecutivos que valoran el respaldo corporativo y prefieren solicitar una cotización de seguro médico por mensajería directa.
+            </p>
+
+            <ul class="space-y-3 text-sm text-graphite">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-forest mt-1 text-xs"></i>
+                <span><strong>WhatsApp Business e Instagram Direct:</strong> Campañas de mensajes diseñadas para iniciar conversaciones calificadas al instante.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-forest mt-1 text-xs"></i>
+                <span><strong>Meta Lead Ads (Formularios Instantáneos):</strong> Captura de nombre, teléfono, ciudad y tipo de cobertura requerida sin abandonar Facebook o Instagram.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-forest mt-1 text-xs"></i>
+                <span><strong>Posicionamiento Corporativo:</strong> Construcción de autoridad y confianza de marca para MAGENZA HEALTH BROKER.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- TikTok Ads -->
+          <div class="glass-card rounded-2xl p-7 sm:p-8 border-t-4 border-t-terracotta">
+            <div class="flex items-center justify-between gap-4 mb-5">
+              <div class="flex items-center gap-3">
+                <span class="w-11 h-11 rounded-xl bg-terracottaSoft text-terracotta flex items-center justify-center text-lg">
+                  <i class="fa-brands fa-tiktok"></i>
+                </span>
+                <div>
+                  <h4 class="text-xl font-bold text-graphite">TikTok Ads</h4>
+                  <p class="text-xs text-slateText">TikTok Business Center & Ads Manager</p>
+                </div>
+              </div>
+              <span class="font-ui text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-terracottaSoft text-terracotta">
+                Alcance & Video Vertical
+              </span>
+            </div>
+
+            <p class="text-sm text-slateText leading-relaxed mb-5">
+              Motor de descubrimiento masivo a bajo costo por impresión, ideal para educar con videos cortos sobre beneficios de seguros de salud y captar a profesionales jóvenes y emprendedores.
+            </p>
+
+            <ul class="space-y-3 text-sm text-graphite">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-terracotta mt-1 text-xs"></i>
+                <span><strong>Videos Informativos Verticales:</strong> Contenido dinámico que explica coberturas, deducibles y beneficios médicos de forma clara.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-terracotta mt-1 text-xs"></i>
+                <span><strong>TikTok Instant Forms:</strong> Formularios nativos de carga ultrarrápida dentro de la app para recolectar prospectos listos para llamada o WhatsApp.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-terracotta mt-1 text-xs"></i>
+                <span><strong>Redirección a WhatsApp:</strong> Llamados a la acción directos para conectar audiencias nuevas con los asesores de MAGENZA.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: ALCANCE TÉCNICO (4 FASES INTERACTIVAS) -->
+  <section id="alcance-tecnico" class="py-20 lg:py-28 border-t border-forest/10 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <span class="font-ui text-xs font-bold uppercase tracking-[0.16em] text-terracotta">02 · Alcance Técnico del Servicio</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-graphite mt-2">
+          Metodología Operativa en Cuatro Fases
+        </h2>
+        <p class="text-base text-slateText mt-3">
+          Selecciona cada fase para revisar el detalle técnico de nuestra operación 100% nativa en Meta Ads y TikTok Ads.
+        </p>
+      </div>
+
+      <!-- Pestañas de Fases -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 mb-8" role="tablist">
+        <button type="button" onclick="switchPhase(0)" id="phase-tab-0" class="phase-tab-btn text-left p-4 rounded-xl transition flex items-center gap-3.5">
+          <span class="phase-num font-financial text-xs font-semibold w-9 h-9 rounded-lg flex items-center justify-center shrink-0">01</span>
+          <div>
+            <p class="phase-kicker font-ui text-[11px] font-bold uppercase tracking-wider">Fase 01</p>
+            <p class="font-ui text-sm font-bold text-graphite">Configuración Business</p>
+          </div>
+        </button>
+
+        <button type="button" onclick="switchPhase(1)" id="phase-tab-1" class="phase-tab-btn text-left p-4 rounded-xl transition flex items-center gap-3.5">
+          <span class="phase-num font-financial text-xs font-semibold w-9 h-9 rounded-lg flex items-center justify-center shrink-0">02</span>
+          <div>
+            <p class="phase-kicker font-ui text-[11px] font-bold uppercase tracking-wider">Fase 02</p>
+            <p class="font-ui text-sm font-bold text-graphite">Estrategia y Audiencias</p>
+          </div>
+        </button>
+
+        <button type="button" onclick="switchPhase(2)" id="phase-tab-2" class="phase-tab-btn text-left p-4 rounded-xl transition flex items-center gap-3.5">
+          <span class="phase-num font-financial text-xs font-semibold w-9 h-9 rounded-lg flex items-center justify-center shrink-0">03</span>
+          <div>
+            <p class="phase-kicker font-ui text-[11px] font-bold uppercase tracking-wider">Fase 03</p>
+            <p class="font-ui text-sm font-bold text-graphite">Campañas Nativas</p>
+          </div>
+        </button>
+
+        <button type="button" onclick="switchPhase(3)" id="phase-tab-3" class="phase-tab-btn text-left p-4 rounded-xl transition flex items-center gap-3.5">
+          <span class="phase-num font-financial text-xs font-semibold w-9 h-9 rounded-lg flex items-center justify-center shrink-0">04</span>
+          <div>
+            <p class="phase-kicker font-ui text-[11px] font-bold uppercase tracking-wider">Fase 04</p>
+            <p class="font-ui text-sm font-bold text-graphite">Optimización y Reportes</p>
+          </div>
+        </button>
+      </div>
+
+      <!-- Panel Dinámico -->
+      <div id="phaseContentPanel" class="glass-surface rounded-2xl p-6 sm:p-10">
+        <!-- Renderizado por JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: PLANES DE GESTIÓN Y REGLA DE ESCALAMIENTO -->
+  <section id="planes-gestion" class="py-20 lg:py-28 border-t border-forest/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="font-ui text-xs font-bold uppercase tracking-[0.16em] text-terracotta">03 · Estructura de Inversión</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-graphite mt-2">
+          Planes de Gestión Evolusercom
+        </h2>
+        <p class="text-base text-slateText mt-3">
+          Esquema transparente que separa los honorarios profesionales de gestión de la inversión directa en medios publicitarios.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
+        
+        <!-- Plan 1: Lanzamiento (1 Plataforma) -->
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="font-ui px-3 py-1 rounded-full text-[11px] font-bold bg-pearl text-graphite border border-forest/15 uppercase tracking-wider">
+                1 Plataforma
+              </span>
+              <span class="text-xs font-medium text-slateText">Meta Ads o TikTok Ads</span>
+            </div>
+
+            <h3 class="text-2xl font-extrabold text-graphite">Plan Lanzamiento</h3>
+            <p class="text-xs text-slateText mt-1">Ideal para validar un primer canal de captación</p>
+
+            <div class="mt-5 pb-5 border-b border-forest/10">
+              <div class="flex items-baseline gap-2">
+                <span class="font-financial text-4xl font-semibold text-graphite">$220</span>
+                <span class="font-ui text-xs font-bold text-forest uppercase tracking-wider">USD + IVA / mes</span>
+              </div>
+              <p class="font-financial text-[11px] text-slateText mt-1">Ref. mercado Ecuador: $180 – $250 + IVA</p>
+              <p class="text-xs text-slateText mt-3 bg-pearl p-3 rounded-lg border border-forest/10">
+                <strong class="text-graphite">Pauta sugerida:</strong> $150 – $300 USD/mes pagados directamente a la plataforma elegida.
+              </p>
+            </div>
+
+            <ul class="mt-5 space-y-2.5 text-sm text-graphite">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-forest mt-1 text-xs"></i>
+                <span>Gestión completa en <strong>Meta Ads</strong> O <strong>TikTok Ads</strong>.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-forest mt-1 text-xs"></i>
+                <span>Campañas nativas a WhatsApp Business o Formularios Instantáneos.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-forest mt-1 text-xs"></i>
+                <span>Configuración de etiquetado de conversaciones en WhatsApp.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-forest mt-1 text-xs"></i>
+                <span>Optimización semanal y reporte ejecutivo mensual nativo.</span>
+              </li>
+            </ul>
+          </div>
+
+          <a
+            href="#simulador-presupuesto"
+            onclick="selectPlan('lanzamiento')"
+            class="no-print font-ui mt-7 w-full py-3 rounded-lg text-xs font-bold tracking-wide text-forest bg-sage hover:bg-forest hover:text-white text-center transition"
+          >
+            Simular Plan Lanzamiento
+          </a>
+        </div>
+
+        <!-- Plan 2: Crecimiento Dual (Recomendado) -->
+        <div class="glass-card rounded-2xl p-7 border-2 border-forest bg-white flex flex-col justify-between relative">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="font-ui px-3 py-1 rounded-full text-[11px] font-bold bg-forest text-white uppercase tracking-wider">
+                Recomendado
+              </span>
+              <span class="text-xs font-semibold text-terracotta">Meta Ads + TikTok Ads</span>
+            </div>
+
+            <h3 class="text-2xl font-extrabold text-graphite">Plan Crecimiento Dual</h3>
+            <p class="text-xs text-slateText mt-1">Cobertura completa de familias, ejecutivos y público joven</p>
+
+            <div class="mt-5 pb-5 border-b border-forest/10">
+              <div class="flex items-baseline gap-2">
+                <span class="font-financial text-4xl font-semibold text-forest">$340</span>
+                <span class="font-ui text-xs font-bold text-forest uppercase tracking-wider">USD + IVA / mes</span>
+              </div>
+              <p class="font-financial text-[11px] text-slateText mt-1">Ref. mercado Ecuador: $300 – $450 + IVA</p>
+              <p class="text-xs text-slateText mt-3 bg-sage/60 p-3 rounded-lg border border-forest/15">
+                <strong class="text-graphite">Pauta sugerida:</strong> $300 – $600 USD/mes distribuidos entre Meta Ads y TikTok Ads.
+              </p>
+            </div>
+
+            <ul class="mt-5 space-y-2.5 text-sm text-graphite">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-forest mt-1 text-xs"></i>
+                <span>Gestión simultánea en <strong>Meta Ads + TikTok Ads</strong>.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-forest mt-1 text-xs"></i>
+                <span>Campañas de mensajes a WhatsApp + Meta Lead Ads + TikTok Instant Forms.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-forest mt-1 text-xs"></i>
+                <span>Pruebas A/B continuas de audiencias, copys y videos cortos.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-forest mt-1 text-xs"></i>
+                <span>Reportes ejecutivos quincenales comparando rendimiento por canal.</span>
+              </li>
+            </ul>
+          </div>
+
+          <a
+            href="#simulador-presupuesto"
+            onclick="selectPlan('dual')"
+            class="no-print font-ui mt-7 w-full py-3 rounded-lg text-xs font-bold tracking-wide text-white bg-forest hover:bg-forestDark text-center transition shadow-sm"
+          >
+            Configurar Plan Dual
+          </a>
+        </div>
+
+        <!-- Módulo 3: Creativos & Videos Verticales -->
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="font-ui px-3 py-1 rounded-full text-[11px] font-bold bg-terracottaSoft text-terracotta uppercase tracking-wider">
+                Módulo Opcional
+              </span>
+              <span class="text-xs font-medium text-slateText">Reels / TikToks</span>
+            </div>
+
+            <h3 class="text-2xl font-extrabold text-graphite">Creativos & Videos</h3>
+            <p class="text-xs text-slateText mt-1">Producción audiovisual orientada a conversión en pauta</p>
+
+            <div class="mt-5 pb-5 border-b border-forest/10">
+              <div class="flex items-baseline gap-2">
+                <span class="font-financial text-4xl font-semibold text-graphite">+$120</span>
+                <span class="font-ui text-xs font-bold text-terracotta uppercase tracking-wider">USD + IVA / mes</span>
+              </div>
+              <p class="font-financial text-[11px] text-slateText mt-1">Ref. mercado Ecuador: +$90 – $150 + IVA</p>
+              <p class="text-xs text-slateText mt-3 bg-pearl p-3 rounded-lg border border-forest/10">
+                <strong class="text-graphite">Entregables mensuales:</strong> 4 piezas gráficas + 3 videos verticales editados.
+              </p>
+            </div>
+
+            <ul class="mt-5 space-y-2.5 text-sm text-graphite">
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-terracotta mt-1 text-xs"></i>
+                <span>Diseño de <strong>4 piezas gráficas</strong> publicitarias de alto impacto.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-terracotta mt-1 text-xs"></i>
+                <span>Edición de <strong>3 videos verticales</strong> (Reels / TikTok) con subtítulos dinámicos y ganchos comerciales.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i class="fa-solid fa-check text-terracotta mt-1 text-xs"></i>
+                <span>Alineados a la identidad visual de MAGENZA HEALTH BROKER.</span>
+              </li>
+            </ul>
+          </div>
+
+          <a
+            href="#simulador-presupuesto"
+            onclick="enableCreatives()"
+            class="no-print font-ui mt-7 w-full py-3 rounded-lg text-xs font-bold tracking-wide text-graphite bg-pearl hover:bg-sage border border-forest/15 text-center transition"
+          >
+            Añadir al Simulador
+          </a>
+        </div>
+      </div>
+
+      <!-- Regla de Escalamiento -->
+      <div id="regla-escalamiento" class="glass-surface rounded-2xl p-5 sm:p-6 border-l-4 border-l-terracotta flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div class="w-10 h-10 rounded-lg bg-terracottaSoft text-terracotta flex items-center justify-center shrink-0">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+        </div>
+        <p class="text-xs sm:text-sm text-slateText leading-relaxed">
+          <strong class="font-ui text-graphite font-bold">Regla de Escalamiento Comercial:</strong> Cuando la inversión publicitaria mensual combinada de MAGENZA HEALTH BROKER supere los <span class="font-financial font-semibold text-graphite">$1,500 USD</span>, el honorario pasa de un fee fijo a un <strong class="text-graphite font-semibold">modelo híbrido</strong> (fee base + 10% a 15% sobre el excedente de inversión), asegurando dedicación técnica proporcional al volumen de campañas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: SIMULADOR INTERACTIVO DE PRESUPUESTO EN TIEMPO REAL -->
+  <section id="simulador-presupuesto" class="py-20 lg:py-28 border-t border-forest/10 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-surface rounded-3xl p-6 sm:p-10">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-forest/10">
+          <div>
+            <span class="font-ui text-xs font-bold uppercase tracking-[0.16em] text-terracotta">04 · Simulador Financiero</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-graphite mt-1.5">
+              Simulador de Presupuesto en Tiempo Real
+            </h2>
+          </div>
+          <p class="text-xs sm:text-sm text-slateText max-w-md">
+            Configura el plan y ajusta la inversión mensual en <strong class="text-graphite">Meta Ads</strong> y <strong class="text-graphite">TikTok Ads</strong> para visualizar el desglose exacto.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-start">
+          
+          <!-- Panel de Controles -->
+          <div class="lg:col-span-6 space-y-5">
+            
+            <!-- 1. Selector de Plan -->
+            <div>
+              <label class="font-ui block text-xs font-bold uppercase tracking-wider text-slateText mb-2.5">
+                1. Selecciona el Plan de Gestión
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button
+                  type="button"
+                  id="btnPlanLanzamiento"
+                  onclick="selectPlan('lanzamiento')"
+                  class="p-4 rounded-xl border border-forest/15 bg-pearl/70 hover:bg-white text-left transition"
+                >
+                  <div class="flex items-center justify-between">
+                    <span class="font-ui text-sm font-bold text-graphite">Plan Lanzamiento</span>
+                    <span class="font-financial text-xs font-semibold text-forest">$220 + IVA</span>
+                  </div>
+                  <p class="text-xs text-slateText mt-1">1 Plataforma (Meta o TikTok)</p>
+                </button>
+
+                <button
+                  type="button"
+                  id="btnPlanDual"
+                  onclick="selectPlan('dual')"
+                  class="p-4 rounded-xl border-2 border-forest bg-white text-left transition shadow-sm"
+                >
+                  <div class="flex items-center justify-between">
+                    <span class="font-ui text-sm font-bold text-graphite">Crecimiento Dual</span>
+                    <span class="font-financial text-xs font-semibold text-forest">$340 + IVA</span>
+                  </div>
+                  <p class="text-xs text-slateText mt-1">Meta Ads + TikTok Ads</p>
+                </button>
+              </div>
+            </div>
+
+            <!-- Selector de Plataforma Única (visible solo en Plan Lanzamiento) -->
+            <div id="singleChannelSelector" class="hidden p-4 rounded-xl bg-sage/50 border border-forest/15">
+              <p class="font-ui text-xs font-bold text-forest mb-2">Elige la plataforma activa para el Plan Lanzamiento:</p>
+              <div class="flex gap-3">
+                <button type="button" id="btnOnlyMeta" onclick="setSingleChannel('meta')" class="font-ui flex-1 py-2 px-3 rounded-lg text-xs font-bold bg-forest text-white transition">
+                  Meta Ads (FB & IG)
+                </button>
+                <button type="button" id="btnOnlyTikTok" onclick="setSingleChannel('tiktok')" class="font-ui flex-1 py-2 px-3 rounded-lg text-xs font-bold bg-white text-graphite border border-forest/15 transition">
+                  TikTok Ads
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. Toggle Módulo de Creativos -->
+            <div class="p-4 sm:p-5 rounded-xl bg-pearl border border-forest/10 flex items-center justify-between gap-4">
+              <div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="font-ui text-sm font-bold text-graphite">Creativos & Videos Verticales</span>
+                  <span class="font-financial text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-terracottaSoft text-terracotta">
+                    +$120 + IVA
+                  </span>
+                </div>
+                <p class="text-xs text-slateText mt-1">
+                  4 piezas gráficas + 3 videos verticales editados (Reels / TikToks).
+                </p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer shrink-0">
+                <input type="checkbox" id="creativesToggle" onchange="recalculateBudget()" class="sr-only peer" />
+                <div class="w-12 h-6 bg-slateText/30 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-forest"></div>
+              </label>
+            </div>
+
+            <!-- 3. Sliders de Inversión en Pauta -->
+            <div class="p-5 rounded-xl bg-pearl border border-forest/10 space-y-5">
+              
+              <!-- Slider Meta Ads -->
+              <div id="metaSliderBox">
+                <div class="flex items-center justify-between mb-2">
+                  <label for="metaSlider" class="font-ui text-sm font-bold text-graphite flex items-center gap-2">
+                    <i class="fa-brands fa-meta text-forest"></i>
+                    <span>Pauta Meta Ads</span>
+                  </label>
+                  <span class="font-financial text-xs font-semibold px-2.5 py-1 rounded-md bg-white border border-forest/15 text-graphite">
+                    $<span id="metaValText">200</span> USD/mes
+                  </span>
+                </div>
+                <input type="range" id="metaSlider" min="0" max="1000" step="50" value="200" oninput="recalculateBudget()" class="w-full" />
+              </div>
+
+              <!-- Slider TikTok Ads -->
+              <div id="tiktokSliderBox" class="pt-3 border-t border-forest/10">
+                <div class="flex items-center justify-between mb-2">
+                  <label for="tiktokSlider" class="font-ui text-sm font-bold text-graphite flex items-center gap-2">
+                    <i class="fa-brands fa-tiktok text-terracotta"></i>
+                    <span>Pauta TikTok Ads</span>
+                  </label>
+                  <span class="font-financial text-xs font-semibold px-2.5 py-1 rounded-md bg-white border border-forest/15 text-graphite">
+                    $<span id="tiktokValText">150</span> USD/mes
+                  </span>
+                </div>
+                <input type="range" id="tiktokSlider" min="0" max="1000" step="50" value="150" oninput="recalculateBudget()" class="w-full" />
+              </div>
+
+            </div>
+
+            <!-- Barra Proporcional de Inversión -->
+            <div class="p-4 rounded-xl bg-white border border-forest/10">
+              <div class="flex items-center justify-between text-xs font-semibold mb-2">
+                <span class="text-forest">Honorarios Evolusercom (<span id="pctHonorarios" class="font-financial">53%</span>)</span>
+                <span class="text-terracotta">Pauta Directa (<span id="pctPauta" class="font-financial">47%</span>)</span>
+              </div>
+              <div class="w-full h-2.5 rounded-full bg-pearl overflow-hidden flex">
+                <div id="barHonorarios" class="h-full bg-forest transition-all duration-300" style="width: 53%;"></div>
+                <div id="barPauta" class="h-full bg-terracotta transition-all duration-300" style="width: 47%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desglose Financiero: Bloque A + Bloque B + Global -->
+          <div class="lg:col-span-6 space-y-4">
+            
+            <!-- BLOQUE A · HONORARIOS DE GESTIÓN (EVOLUSERCOM) -->
+            <div class="rounded-2xl bg-white border border-forest/15 p-6 shadow-sm">
+              <div class="flex items-center justify-between mb-4">
+                <span class="font-ui text-[11px] font-bold uppercase tracking-[0.12em] px-3 py-1 rounded-md bg-sage text-forest">
+                  Bloque A · Honorarios Evolusercom
+                </span>
+                <i class="fa-solid fa-file-invoice text-forest text-sm"></i>
+              </div>
+
+              <div class="space-y-2.5 text-sm text-slateText border-b border-forest/10 pb-4">
+                <div class="flex justify-between">
+                  <span id="simPlanName">Plan Crecimiento Dual (Meta + TikTok)</span>
+                  <span class="font-financial font-medium text-graphite">$<span id="simBaseAmount">340.00</span></span>
+                </div>
+                <div id="simCreativesLine" class="hidden justify-between text-terracotta font-medium">
+                  <span>Módulo Creativos & Videos Verticales</span>
+                  <span class="font-financial">+$120.00</span>
+                </div>
+                <div class="flex justify-between text-xs">
+                  <span>Subtotal Honorarios</span>
+                  <span class="font-financial">$<span id="simSubtotal">340.00</span></span>
+                </div>
+                <div class="flex justify-between text-xs">
+                  <span>IVA (15% Ecuador)</span>
+                  <span class="font-financial">$<span id="simIva">51.00</span></span>
+                </div>
+              </div>
+
+              <div class="flex items-baseline justify-between pt-4">
+                <span class="font-ui text-sm font-bold text-graphite">Total a Facturar (inc. IVA)</span>
+                <span class="font-financial text-2xl font-semibold text-forest">$<span id="simTotalFee">391.00</span> USD</span>
+              </div>
+            </div>
+
+            <!-- BLOQUE B · INVERSIÓN DIRECTA EN PAUTA -->
+            <div class="rounded-2xl bg-white border border-forest/15 p-6 shadow-sm">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-ui text-[11px] font-bold uppercase tracking-[0.12em] px-3 py-1 rounded-md bg-terracottaSoft text-terracotta">
+                  Bloque B · Inversión Directa en Pauta
+                </span>
+                <i class="fa-solid fa-credit-card text-terracotta text-sm"></i>
+              </div>
+
+              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3">
+                <div>
+                  <p class="font-ui text-xs font-bold text-graphite">Pagado por MAGENZA HEALTH BROKER a Meta / TikTok</p>
+                  <p class="text-xs text-slateText mt-1">
+                    Meta: <span class="font-financial font-semibold text-graphite">$<span id="simMetaBreak">200</span></span> · TikTok: <span class="font-financial font-semibold text-graphite">$<span id="simTikTokBreak">150</span></span>
+                  </p>
+                  <p class="text-xs text-slateText mt-0.5">
+                    Gasto diario estimado: <span class="font-financial font-semibold text-forest">$<span id="simDaily">11.67</span> USD / día</span>
+                  </p>
+                </div>
+                <span class="font-financial text-2xl font-semibold text-graphite shrink-0">$<span id="simPautaTotal">350.00</span> USD</span>
+              </div>
+            </div>
+
+            <!-- PRESUPUESTO GLOBAL MENSUAL -->
+            <div class="rounded-2xl bg-forest text-white p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-md">
+              <div>
+                <p class="font-ui text-[11px] uppercase tracking-[0.14em] text-sage font-bold">
+                  Presupuesto Global Mensual Estimado
+                </p>
+                <p class="font-financial text-3xl font-semibold text-white mt-1">
+                  $<span id="simGrandTotal">741.00</span> USD
+                </p>
+              </div>
+              <button
+                type="button"
+                onclick="openApprovalModal()"
+                class="no-print font-ui inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-xs font-bold tracking-wide text-forest bg-white hover:bg-sage transition shadow-sm"
+              >
+                <i class="fa-solid fa-signature"></i>
+                <span>Aprobar Propuesta</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: CONDICIONES COMERCIALES, PROPIEDAD DE ACTIVOS Y APROBACIÓN -->
+  <section id="requerimientos-entregables" class="py-20 lg:py-28 border-t border-forest/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-14">
+        <span class="font-ui text-xs font-bold uppercase tracking-[0.16em] text-terracotta">05 · Condiciones Comerciales</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-graphite mt-2">
+          Garantías, Responsabilidades y Propiedad de Activos
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Forma de Pago y Ciclos -->
+        <div class="glass-card rounded-2xl p-7">
+          <div class="w-11 h-11 rounded-xl bg-sage text-forest flex items-center justify-center text-lg mb-5">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+          </div>
+          <h3 class="text-xl font-bold text-graphite mb-3">Forma de Pago y Ciclos</h3>
+          <ul class="space-y-3 text-sm text-slateText leading-relaxed">
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+              <span><strong class="text-graphite font-semibold">100% al inicio de cada mes</strong> contra factura para la activación y gestión de campañas.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+              <span><strong class="text-graphite font-semibold">Sin permanencia forzosa:</strong> renovación mensual sujeta al desempeño comercial.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+              <span>Se recomienda un <strong class="text-graphite font-semibold">ciclo mínimo de 3 meses</strong> para maduración de audiencias en Meta y TikTok.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Responsabilidades Claras -->
+        <div class="glass-card rounded-2xl p-7">
+          <div class="w-11 h-11 rounded-xl bg-sage text-forest flex items-center justify-center text-lg mb-5">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h3 class="text-xl font-bold text-graphite mb-3">Responsabilidades Claras</h3>
+          <ul class="space-y-3 text-sm text-slateText leading-relaxed">
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+              <span><strong class="text-graphite font-semibold">Evolusercom:</strong> gestiona la estrategia de tráfico, segmentación, montaje de campañas nativas y optimización semanal.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+              <span><strong class="text-graphite font-semibold">MAGENZA HEALTH BROKER:</strong> atiende oportunamente los leads en WhatsApp Business y ejecuta el cierre de pólizas.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Propiedad de Activos -->
+        <div id="propiedad-activos" class="glass-card rounded-2xl p-7">
+          <div class="w-11 h-11 rounded-xl bg-sage text-forest flex items-center justify-center text-lg mb-5">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="text-xl font-bold text-graphite mb-3">Propiedad de Activos</h3>
+          <ul class="space-y-3 text-sm text-slateText leading-relaxed">
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+              <span>Las cuentas de <strong class="text-graphite font-semibold">Meta Business Suite</strong> y <strong class="text-graphite font-semibold">TikTok Business Center</strong> son 100% propiedad de MAGENZA HEALTH BROKER.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest mt-2 shrink-0"></span>
+              <span>Los datos de formularios nativos y audiencias pertenecen íntegramente al cliente en todo momento.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER Y BLOQUE DE APROBACIÓN -->
+  <footer id="aprobacion-propuesta" class="border-t border-forest/10 bg-white py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Banner de Cierre -->
+      <div class="no-print rounded-2xl bg-forest text-white p-8 sm:p-10 mb-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+        <div class="max-w-2xl">
+          <p class="font-ui text-[11px] font-bold uppercase tracking-[0.16em] text-sage mb-2">Aprobación Comercial</p>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+            Iniciemos la captación digital de MAGENZA HEALTH BROKER
+          </h3>
+          <p class="text-sm text-white/80 mt-2">
+            Confirma tu configuración del simulador para agendar la sesión de onboarding y estructurar Meta Business Suite y TikTok Business Center.
+          </p>
+        </div>
+        <button
+          type="button"
+          onclick="openApprovalModal()"
+          class="font-ui shrink-0 inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg text-xs font-bold tracking-wide text-forest bg-white hover:bg-sage transition"
+        >
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Aprobar Propuesta</span>
+        </button>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-forest/10">
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+          <img
+            src="https://raw.githubusercontent.com/direccioncomercial/evoluser-web/main/logo.png"
+            alt="Evolusercom"
+            class="h-10 w-auto object-contain"
+            onerror="this.onerror=null; this.outerHTML='<span class=\'font-display font-extrabold text-lg text-forest\'>EVOLUSER<span class=\'text-graphite\'>COM</span></span>';"
+          />
+          <div class="text-center sm:text-left sm:border-l sm:border-forest/15 sm:pl-4">
+            <p class="font-ui text-sm font-bold text-graphite">Evolusercom · Gestión de Tráfico Digital</p>
+            <p class="text-xs text-slateText">Quito, Ecuador · Propuesta preparada para MAGENZA HEALTH BROKER</p>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          onclick="window.print()"
+          class="no-print font-ui inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold text-forest bg-sage/70 hover:bg-sage border border-forest/15 transition"
+        >
+          <i class="fa-solid fa-print"></i>
+          <span>Imprimir / Guardar PDF</span>
+        </button>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slateText gap-2">
+        <p>© 2026 Evolusercom. Propuesta comercial confidencial con validez de 15 días calendario.</p>
+        <p class="font-financial">Moneda: USD (Dólares de los Estados Unidos de América)</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL EJECUTIVO DE APROBACIÓN -->
+  <div
+    id="approvalModal"
+    class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-graphite/50 backdrop-blur-sm"
+    role="dialog"
+    aria-modal="true"
+  >
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border border-forest/15 animate-fade max-h-[92vh] overflow-y-auto">
+      <button
+        type="button"
+        onclick="closeApprovalModal()"
+        class="absolute top-5 right-5 w-9 h-9 rounded-lg bg-pearl hover:bg-sage text-graphite flex items-center justify-center transition"
+        aria-label="Cerrar modal"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="mb-6">
+        <span class="font-ui text-[11px] font-bold uppercase tracking-[0.14em] text-terracotta">Confirmación Ejecutiva</span>
+        <h3 class="text-2xl font-extrabold text-graphite mt-1">Aprobar Propuesta</h3>
+        <p class="text-xs text-slateText mt-1">
+          Revisa el resumen precargado para MAGENZA HEALTH BROKER y envíalo por WhatsApp o cópialo al portapapeles.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <label for="modalCompany" class="font-ui block text-xs font-bold text-graphite mb-1">Empresa / Cliente</label>
+          <input
+            type="text"
+            id="modalCompany"
+            value="MAGENZA HEALTH BROKER"
+            oninput="syncApprovalSummary()"
+            class="w-full px-4 py-2.5 rounded-lg bg-pearl border border-forest/15 text-sm text-graphite focus:outline-none focus:border-forest"
+          />
+        </div>
+
+        <div>
+          <label for="modalWhatsApp" class="font-ui block text-xs font-bold text-graphite mb-1">
+            Número de WhatsApp Destino (Opcional, con código país)
+          </label>
+          <input
+            type="tel"
+            id="modalWhatsApp"
+            placeholder="Ej. 593999999999"
+            oninput="syncApprovalSummary()"
+            class="w-full px-4 py-2.5 rounded-lg bg-pearl border border-forest/15 text-sm font-financial text-graphite focus:outline-none focus:border-forest"
+          />
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-1">
+            <span class="font-ui text-xs font-bold text-graphite">Resumen Seleccionado</span>
+            <button
+              type="button"
+              onclick="copySummaryText()"
+              class="font-ui text-xs font-bold text-forest hover:text-terracotta flex items-center gap-1 transition"
+            >
+              <i class="fa-regular fa-copy"></i>
+              <span>Copiar resumen</span>
+            </button>
+          </div>
+          <textarea
+            id="approvalTextarea"
+            rows="7"
+            readonly
+            class="w-full p-3.5 rounded-lg bg-pearl border border-forest/15 text-xs text-graphite leading-relaxed focus:outline-none"
+          ></textarea>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <button
+            type="button"
+            onclick="copySummaryText()"
+            class="font-ui py-3 px-4 rounded-lg text-xs font-bold text-forest bg-sage hover:bg-forest/15 transition"
+          >
+            Copiar al Portapapeles
+          </button>
+          <a
+            id="whatsappActionLink"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-ui py-3 px-4 rounded-lg text-xs font-bold text-white bg-forest hover:bg-forestDark transition flex items-center justify-center gap-2"
+          >
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Enviar por WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTIFICACIÓN TOAST -->
+  <div
+    id="toastBox"
+    class="hidden fixed bottom-6 right-6 z-50 bg-forest text-white px-5 py-3.5 rounded-xl shadow-xl flex items-center gap-3 animate-fade"
+  >
+    <i class="fa-solid fa-check text-sage"></i>
+    <span id="toastMessage" class="font-ui text-xs font-semibold">Acción completada</span>
+  </div>
+
+  <!-- LÓGICA INTERACTIVA -->
+  <script>
+    const state = {
+      plan: 'dual', // 'lanzamiento' ($220) | 'dual' ($340)
+      singleChannel: 'meta', // 'meta' | 'tiktok' (solo en Lanzamiento)
+      creatives: false, // +$120
+      metaSpend: 200,
+      tiktokSpend: 150,
+      company: 'MAGENZA HEALTH BROKER',
+    };
+
+    // 4 Fases Técnicas (100% Nativas, Cero Píxel, con Meta Ads + TikTok Ads)
+    const phasesData = [
+      {
+        badge: 'Fase 01 · Infraestructura Oficial',
+        title: 'Configuración Business (Meta & TikTok)',
+        summary: 'Estructuramos los activos comerciales de MAGENZA HEALTH BROKER bajo su titularidad absoluta, listos para operar campañas nativas sin fricciones técnicas.',
+        bullets: [
+          'Creación o auditoría profesional de Meta Business Suite y cuenta publicitaria.',
+          'Configuración oficial de TikTok Business Center y TikTok Ads Manager.',
+          'Vinculación directa de WhatsApp Business, Instagram Profesional y FanPage.',
+          'Configuración del método de pago directo del cliente en ambas plataformas.',
+        ],
+        img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&h=750&crop=faces,top&q=85',
+        caption: 'Equipo digital configurando Meta Business Suite y TikTok Business Center',
+      },
+      {
+        badge: 'Fase 02 · Inteligencia Comercial',
+        title: 'Estrategia y Segmentación',
+        summary: 'Definimos audiencias precisas en Ecuador y Latinoamérica según los segmentos de mayor rentabilidad para seguros médicos y planes de salud.',
+        bullets: [
+          'Definición de perfiles de cliente ideal: familias, ejecutivos, independientes y jóvenes profesionales.',
+          'Segmentación geográfica y por intereses de salud, bienestar y protección patrimonial.',
+          'Diseño de mensajes diferenciados por canal: tono consultivo en Meta y educativo/ágil en TikTok.',
+          'Construcción de audiencias nativas basadas en interacción de videos, perfiles y formularios.',
+        ],
+        img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&h=750&crop=faces,top&q=85',
+        caption: 'Planificación estratégica de audiencias para el sector salud',
+      },
+      {
+        badge: 'Fase 03 · Despliegue 100% Nativo',
+        title: 'Campañas Nativas (WhatsApp y Formularios)',
+        summary: 'Lanzamos campañas diseñadas para que el usuario solicite asesoría o cotización en segundos sin salir de Facebook, Instagram o TikTok.',
+        bullets: [
+          'Campañas directas a WhatsApp Business e Instagram Direct con mensajes de bienvenida preconfigurados.',
+          'Formularios Instantáneos Nativos (Meta Lead Ads y TikTok Instant Forms) con preguntas filtro de calificación.',
+          'Campañas de video vertical en TikTok Ads orientadas a descubrimiento educativo y captación de leads.',
+          'Pruebas A/B continuas de copys, titulares y piezas creativas para identificar los anuncios ganadores.',
+        ],
+        img: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&h=750&crop=faces,top&q=85',
+        caption: 'Despliegue de campañas nativas de mensajería y formularios',
+      },
+      {
+        badge: 'Fase 04 · Control y Resultados',
+        title: 'Optimización y Reportes Ejecutivos',
+        summary: 'Medimos cada dólar invertido mediante métricas nativas y trazabilidad directa en WhatsApp Business para escalar los anuncios más rentables.',
+        bullets: [
+          'Implementación de sistema de etiquetado de conversaciones en WhatsApp Business (Nuevo, En Cotización, Cerrado).',
+          'Monitoreo semanal de costo por conversación, costo por formulario, CTR y frecuencia.',
+          'Pausa oportuna de anuncios de bajo desempeño y redistribución de presupuesto a conjuntos ganadores.',
+          'Entrega de reportes ejecutivos con datos nativos de Meta Ads Manager y TikTok Ads Manager.',
+        ],
+        img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&h=750&crop=faces,top&q=85',
+        caption: 'Revisión ejecutiva de métricas nativas y optimización semanal',
+      },
+    ];
+
+    /* 1. Submenús al Clic */
+    function toggleClickSubmenu(submenuId, triggerBtn) {
+      const target = document.getElementById(submenuId);
+      const isAlreadyOpen = !target.classList.contains('hidden');
+      closeAllSubmenus();
+      if (!isAlreadyOpen) {
+        target.classList.remove('hidden');
+        triggerBtn.classList.add('menu-open', 'bg-sage/70', 'text-forest');
+        triggerBtn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    function closeAllSubmenus() {
+      document.querySelectorAll('.nav-submenu').forEach((m) => m.classList.add('hidden'));
+      document.querySelectorAll('.nav-trigger').forEach((b) => {
+        b.classList.remove('menu-open', 'bg-sage/70', 'text-forest');
+        b.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-item-container')) closeAllSubmenus();
+    });
+
+    function toggleMobileDrawer() {
+      const drawer = document.getElementById('mobileDrawer');
+      const icon = document.getElementById('mobileDrawerIcon');
+      drawer.classList.toggle('hidden');
+      icon.className = drawer.classList.contains('hidden') ? 'fa-solid fa-bars text-base' : 'fa-solid fa-xmark text-base';
+    }
+
+    function toggleMobAccordion(id, btn) {
+      document.getElementById(id).classList.toggle('hidden');
+      btn.classList.toggle('menu-open');
+    }
+
+    /* 2. Pestañas de Alcance Técnico */
+    function switchPhase(index) {
+      document.querySelectorAll('.phase-tab-btn').forEach((btn, i) => {
+        const num = btn.querySelector('.phase-num');
+        const kicker = btn.querySelector('.phase-kicker');
+        if (i === index) {
+          btn.className = 'phase-tab-btn text-left p-4 rounded-xl transition flex items-center gap-3.5 bg-white border-2 border-forest shadow-sm';
+          num.className = 'phase-num font-financial text-xs font-semibold w-9 h-9 rounded-lg flex items-center justify-center shrink-0 bg-forest text-white';
+          kicker.className = 'phase-kicker font-ui text-[11px] font-bold uppercase tracking-wider text-forest';
+        } else {
+          btn.className = 'phase-tab-btn text-left p-4 rounded-xl transition flex items-center gap-3.5 bg-pearl/70 border border-forest/10 hover:bg-white';
+          num.className = 'phase-num font-financial text-xs font-semibold w-9 h-9 rounded-lg flex items-center justify-center shrink-0 bg-sage text-forest';
+          kicker.className = 'phase-kicker font-ui text-[11px] font-bold uppercase tracking-wider text-slateText';
+        }
+      });
+
+      const phase = phasesData[index];
+      document.getElementById('phaseContentPanel').innerHTML = `
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center animate-fade">
+          <div class="lg:col-span-7 space-y-4">
+            <span class="font-ui inline-block px-3 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-sage text-forest">
+              ${phase.badge}
+            </span>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-graphite">${phase.title}</h3>
+            <p class="text-sm sm:text-base text-slateText leading-relaxed">${phase.summary}</p>
+            <ul class="space-y-3 pt-2">
+              ${phase.bullets
+                .map(
+                  (item) => `
+                <li class="flex items-start gap-3 text-sm text-graphite">
+                  <span class="w-5 h-5 rounded-full bg-sage text-forest flex items-center justify-center shrink-0 mt-0.5 text-[10px]">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
+                  <span>${item}</span>
+                </li>
+              `
+                )
+                .join('')}
+            </ul>
+          </div>
+          <div class="lg:col-span-5">
+            <div class="rounded-xl overflow-hidden bg-pearl border border-forest/10 p-2">
+              <div class="relative aspect-[16/10] w-full overflow-hidden rounded-lg bg-pearl">
+                <img
+                  src="${phase.img}"
+                  alt="${phase.title}"
+                  class="w-full h-full object-cover object-[50%_22%] mask-soft-bottom"
+                  onerror="this.src='https://placehold.co/1200x750/e6efea/1d4d42?text=Evolusercom'"
+                />
+                <div class="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-pearl/80 to-transparent"></div>
+              </div>
+              <p class="text-center text-xs font-medium text-slateText py-2.5">${phase.caption}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function navigateToPhase(index) {
+      switchPhase(index);
+      closeAllSubmenus();
+    }
+
+    /* 3. Simulador en Tiempo Real (Meta Ads + TikTok Ads) */
+    function selectPlan(planKey) {
+      state.plan = planKey;
+      const btnLan = document.getElementById('btnPlanLanzamiento');
+      const btnDual = document.getElementById('btnPlanDual');
+      const singleBox = document.getElementById('singleChannelSelector');
+      const metaSlider = document.getElementById('metaSlider');
+      const tiktokSlider = document.getElementById('tiktokSlider');
+
+      if (planKey === 'lanzamiento') {
+        btnLan.className = 'p-4 rounded-xl border-2 border-forest bg-white text-left transition shadow-sm';
+        btnDual.className = 'p-4 rounded-xl border border-forest/15 bg-pearl/70 hover:bg-white text-left transition';
+        singleBox.classList.remove('hidden');
+        setSingleChannel(state.singleChannel);
+      } else {
+        btnDual.className = 'p-4 rounded-xl border-2 border-forest bg-white text-left transition shadow-sm';
+        btnLan.className = 'p-4 rounded-xl border border-forest/15 bg-pearl/70 hover:bg-white text-left transition';
+        singleBox.classList.add('hidden');
+        metaSlider.disabled = false;
+        tiktokSlider.disabled = false;
+        if (parseFloat(metaSlider.value) === 0) metaSlider.value = 200;
+        if (parseFloat(tiktokSlider.value) === 0) tiktokSlider.value = 150;
+        recalculateBudget();
+      }
+    }
+
+    function setSingleChannel(channel) {
+      state.singleChannel = channel;
+      const btnMeta = document.getElementById('btnOnlyMeta');
+      const btnTikTok = document.getElementById('btnOnlyTikTok');
+      const metaSlider = document.getElementById('metaSlider');
+      const tiktokSlider = document.getElementById('tiktokSlider');
+
+      if (channel === 'meta') {
+        btnMeta.className = 'font-ui flex-1 py-2 px-3 rounded-lg text-xs font-bold bg-forest text-white transition';
+        btnTikTok.className = 'font-ui flex-1 py-2 px-3 rounded-lg text-xs font-bold bg-white text-graphite border border-forest/15 transition';
+        metaSlider.disabled = false;
+        if (parseFloat(metaSlider.value) < 150) metaSlider.value = 200;
+        tiktokSlider.value = 0;
+        tiktokSlider.disabled = true;
+      } else {
+        btnTikTok.className = 'font-ui flex-1 py-2 px-3 rounded-lg text-xs font-bold bg-forest text-white transition';
+        btnMeta.className = 'font-ui flex-1 py-2 px-3 rounded-lg text-xs font-bold bg-white text-graphite border border-forest/15 transition';
+        tiktokSlider.disabled = false;
+        if (parseFloat(tiktokSlider.value) < 150) tiktokSlider.value = 200;
+        metaSlider.value = 0;
+        metaSlider.disabled = true;
+      }
+      recalculateBudget();
+    }
+
+    function enableCreatives() {
+      document.getElementById('creativesToggle').checked = true;
+      recalculateBudget();
+    }
+
+    function recalculateBudget() {
+      state.creatives = document.getElementById('creativesToggle').checked;
+      state.metaSpend = parseFloat(document.getElementById('metaSlider').value) || 0;
+      state.tiktokSpend = parseFloat(document.getElementById('tiktokSlider').value) || 0;
+
+      const baseFee = state.plan === 'dual' ? 340 : 220;
+      const creativesFee = state.creatives ? 120 : 0;
+      const subtotal = baseFee + creativesFee;
+      const iva = subtotal * 0.15;
+      const totalFee = subtotal + iva;
+
+      const totalPauta = state.metaSpend + state.tiktokSpend;
+      const dailyPauta = totalPauta / 30;
+      const grandTotal = totalFee + totalPauta;
+
+      const pctFee = grandTotal > 0 ? Math.round((totalFee / grandTotal) * 100) : 100;
+      const pctPauta = 100 - pctFee;
+
+      document.getElementById('metaValText').textContent = state.metaSpend.toLocaleString('en-US');
+      document.getElementById('tiktokValText').textContent = state.tiktokSpend.toLocaleString('en-US');
+
+      const planLabel =
+        state.plan === 'dual'
+          ? 'Plan Crecimiento Dual (Meta + TikTok)'
+          : state.singleChannel === 'meta'
+          ? 'Plan Lanzamiento (Meta Ads)'
+          : 'Plan Lanzamiento (TikTok Ads)';
+      document.getElementById('simPlanName').textContent = planLabel;
+      document.getElementById('simBaseAmount').textContent = baseFee.toFixed(2);
+
+      const creLine = document.getElementById('simCreativesLine');
+      if (state.creatives) {
+        creLine.classList.remove('hidden');
+        creLine.classList.add('flex');
+      } else {
+        creLine.classList.add('hidden');
+        creLine.classList.remove('flex');
+      }
+
+      document.getElementById('simSubtotal').textContent = subtotal.toFixed(2);
+      document.getElementById('simIva').textContent = iva.toFixed(2);
+      document.getElementById('simTotalFee').textContent = totalFee.toFixed(2);
+
+      document.getElementById('simMetaBreak').textContent = state.metaSpend.toLocaleString('en-US');
+      document.getElementById('simTikTokBreak').textContent = state.tiktokSpend.toLocaleString('en-US');
+      document.getElementById('simDaily').textContent = dailyPauta.toFixed(2);
+      document.getElementById('simPautaTotal').textContent = totalPauta.toFixed(2);
+      document.getElementById('simGrandTotal').textContent = grandTotal.toFixed(2);
+
+      document.getElementById('pctHonorarios').textContent = pctFee + '%';
+      document.getElementById('pctPauta').textContent = pctPauta + '%';
+      document.getElementById('barHonorarios').style.width = pctFee + '%';
+      document.getElementById('barPauta').style.width = pctPauta + '%';
+
+      syncApprovalSummary();
+    }
+
+    /* 4. Modal de Aprobación */
+    function openApprovalModal() {
+      syncApprovalSummary();
+      document.getElementById('approvalModal').classList.remove('hidden');
+    }
+
+    function closeApprovalModal() {
+      document.getElementById('approvalModal').classList.add('hidden');
+    }
+
+    function syncApprovalSummary() {
+      const companyVal = document.getElementById('modalCompany').value.trim() || 'MAGENZA HEALTH BROKER';
+      const phoneVal = document.getElementById('modalWhatsApp').value.replace(/\D/g, '');
+      state.company = companyVal;
+      document.getElementById('heroClientName').textContent = companyVal;
+
+      const planLabel = document.getElementById('simPlanName').textContent;
+      const creativesLabel = state.creatives ? 'Incluido (+$120 + IVA)' : 'No incluido';
+      const totalFee = document.getElementById('simTotalFee').textContent;
+      const totalPauta = document.getElementById('simPautaTotal').textContent;
+      const daily = document.getElementById('simDaily').textContent;
+
+      const message =
+        `Hola equipo de Evolusercom, confirmamos la aprobación de la Propuesta Comercial de Tráfico Digital:\n\n` +
+        `- Cliente: ${companyVal}\n` +
+        `- Plan: ${planLabel}\n` +
+        `- Creativos & Videos Verticales: ${creativesLabel}\n` +
+        `- Bloque A (Honorarios Evolusercom inc. IVA 15%): $${totalFee} USD/mes\n` +
+        `- Bloque B (Pauta Directa): $${totalPauta} USD/mes (Meta Ads: $${state.metaSpend} | TikTok Ads: $${state.tiktokSpend} | ~$${daily}/día)\n\n` +
+        `Quedamos atentos para agendar el onboarding de Meta Business Suite y TikTok Business Center.`;
+
+      document.getElementById('approvalTextarea').value = message;
+      const baseWa = phoneVal ? `https://wa.me/${phoneVal}?text=` : `https://wa.me/?text=`;
+      document.getElementById('whatsappActionLink').href = baseWa + encodeURIComponent(message);
+    }
+
+    function copySummaryText() {
+      const area = document.getElementById('approvalTextarea');
+      area.select();
+      area.setSelectionRange(0, 99999);
+      document.execCommand('copy');
+      showToast('Resumen copiado al portapapeles');
+    }
+
+    function showToast(msg) {
+      const box = document.getElementById('toastBox');
+      document.getElementById('toastMessage').textContent = msg;
+      box.classList.remove('hidden');
+      setTimeout(() => box.classList.add('hidden'), 2800);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      switchPhase(0);
+      recalculateBudget();
+    });
+  </script>
+</body>
+</html>
